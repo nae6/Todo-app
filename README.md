@@ -74,8 +74,7 @@ Laravelで作成したTodo管理アプリです。
 - users (1) ─── (N) categories
 - categories (1) ─── (N) todos
 
-（ここに画像を貼る）
-![ERD](docs/erd.png)
+
 
 ---
 
