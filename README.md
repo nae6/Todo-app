@@ -74,8 +74,6 @@ Laravelで作成したTodo管理アプリです。
 - users (1) ─── (N) categories
 - categories (1) ─── (N) todos
 
-
-
 ---
 
 ## DB設計（カラム例）
@@ -115,8 +113,8 @@ Laravelで作成したTodo管理アプリです。
 
 ### 1. リポジトリをクローン
 ```bash
-git clone https://github.com/nae6/laravel-todo-app.git
-cd laravel-todo-app
+git clone https://github.com/nae6/Todo-app.git
+cd Todo-app
 ```
 
 ### 2. Dockerを起動
@@ -134,14 +132,21 @@ docker-compose exec php bash
 composer install
 ```
 
-### 4. .env作成
+### 5. .env作成
 ```bash
 cp .env.example .env
 php artisan key:generate
 ```
 
-### 5. DB作成・マイグレーション
+### 6. DB作成・マイグレーション
 ```bash
 php artisan migrate
 php artisan db:seed
 ```
+
+### 7. アプリにアクセス
+ブラウザで [http://localhost/](http://localhost/) を開く（未ログインの場合はログイン画面にリダイレクトされます）。
+
+`db:seed` で作成されるテスト用アカウントでログインすると、サンプルのTodoが8件登録された状態を確認できます。
+- email: `test@example.com`
+- password: `password`
